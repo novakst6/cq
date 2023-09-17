@@ -1,0 +1,30 @@
+.App {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+}
+.layout-m {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+}
+
+.layout-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.l-row {
+  display: flex;
+  flex-direction: row;
+  margin: 1em 0;
+}
+.l-frame {
+  width: 100%;
+}
+

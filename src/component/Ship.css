@@ -1,0 +1,135 @@
+.content {
+    min-height: 100%;
+    container-type: inline-size;
+}
+
+.ship {
+    display: flex;
+    flex-direction: row;
+}
+
+.cargo {
+    height: 50px;
+}
+
+.sea {
+    /*background-color: #87cefa;*/
+    min-height: 10em;
+}
+
+.sea-image {
+    /*background-image: url("/src/assets/water.svg");*/
+    /*background-repeat: repeat-x;*/
+    background-color: cornflowerblue;
+    min-height: 10em;
+}
+.boat-container {
+    width: 80%;
+    height: inherit;
+    margin: auto;
+}
+
+.cargo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+    height: auto;
+    transform: rotateX(180deg);
+}
+
+.cargo-item {
+    width: 2em;
+    height: 2em;
+    background-color: green;
+    border: black solid 1px;
+}
+/*.cargo-item:nth-child(2n) {*/
+/*    background-color: red;*/
+/*    display: none;*/
+/*}*/
+
+.boat {
+    display: flex;
+    height: 5em;
+}
+.boat-left {
+    background-color: darkslategray;
+    width: 10em;
+    border-radius: 0 0 0 5em;
+}
+.boat-middle {
+    background-color: darkslategray;
+    width: 100%;
+}
+.boat-right {
+    background-color: darkslategray;
+    width: 10em;
+    border-radius: 0 0 5em 0;
+}
+
+.boat-container:hover {
+    animation-name: boat-float;
+    animation-duration: 2s;
+    animation-iteration-count: 10;
+}
+
+@keyframes boat-float {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(1deg);
+    }
+    50% {
+        transform: rotate(0);
+    }
+    75% {
+        transform: rotate(-1deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@container (max-width: 900px) {
+
+    .cargo-item {
+        background-color: deeppink;
+    }
+    .cargo-item:nth-child(-n + 40) {
+        display: none;
+    }
+}
+
+@container (max-width: 500px) {
+
+    .cargo-item {
+        background-color: red;
+    }
+    .cargo-item:nth-child(-n + 60) {
+        display: none;
+    }
+}
+
+@container (max-width: 250px) {
+
+    .cargo-item {
+        background-color: blue;
+    }
+    .cargo-item:nth-child(-n + 70) {
+        display: none;
+    }
+}
+
+@container (max-width: 125px) {
+
+    .cargo-item {
+        background-color: coral;
+    }
+    .cargo-item:nth-child(-n + 75) {
+        display: none;
+    }
+}
